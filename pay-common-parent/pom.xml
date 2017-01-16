@@ -120,20 +120,50 @@
 		<org.springframework.version>3.2.4.RELEASE</org.springframework.version>
 		<org.apache.struts.version>2.3.15.1</org.apache.struts.version>
 
-	</properties>
+		<junit.version>4.11</junit.version>
 
-	<dependencies>
-		<!-- Test Dependency Begin -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-		</dependency>
-		<!-- Test Dependency End -->
-	</dependencies>
+	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<!-- 表示test的时候引入，发布的时候不会加载此�? -->
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>xalan</groupId>
+				<artifactId>xalan</artifactId>
+				<version>2.7.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>xml-apis</groupId>
+						<artifactId>xml-apis</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>jaxen</groupId>
+				<artifactId>jaxen</artifactId>
+				<version>1.1.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>xml-apis</groupId>
+						<artifactId>xml-apis</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ibm.icu</groupId>
+				<artifactId>icu4j</artifactId>
+				<version>3.4.4</version>
+			</dependency>
+
 			<!-- Common Dependency Begin -->
 			<dependency>
 				<groupId>antlr</groupId>
@@ -197,7 +227,7 @@
 			<dependency>
 				<groupId>commons-net</groupId>
 				<artifactId>commons-net</artifactId>
-				<version>3.2</version>
+				<version>3.3</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-beanutils</groupId>
@@ -330,13 +360,13 @@
 			<dependency>
 				<groupId>org.apache.zookeeper</groupId>
 				<artifactId>zookeeper</artifactId>
-				<version>3.4.5</version>
+				<version>3.4.6</version>
 			</dependency>
 
 			<dependency>
 				<groupId>com.101tec</groupId>
 				<artifactId>zkclient</artifactId>
-				<version>0.3</version>
+				<version>0.4</version>
 			</dependency>
 			<!-- Zookeeper 用于分布式服务管理 end -->
 

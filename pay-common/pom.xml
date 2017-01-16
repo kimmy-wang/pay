@@ -24,8 +24,8 @@
 		<dependency>
 			<groupId>xalan</groupId>
 			<artifactId>xalan</artifactId>
-			<version>2.7.1</version>
 		</dependency>
+
 		<!-- Common Dependency Begin -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -153,12 +153,10 @@
 		<dependency>
 			<groupId>jaxen</groupId>
 			<artifactId>jaxen</artifactId>
-			<version>1.1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ibm.icu</groupId>
 			<artifactId>icu4j</artifactId>
-			<version>3.4.4</version>
 		</dependency>
 		<!-- Common Dependency End -->
 
@@ -173,7 +171,6 @@
 		<dependency>
 			<groupId>commons-net</groupId>
 			<artifactId>commons-net</artifactId>
-			<version>3.3</version>
 		</dependency>
 		<!-- ftp end -->
 
